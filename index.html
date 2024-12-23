@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Dashboard</h1>
+      <div class="search">
+        <input type="text" id="city" placeholder="Enter city name..." />
+        <button id="search-btn">Search</button>
+        <button id="geo-btn">Use My Location</button>
+      </div>
+      <div class="weather-info">
+        <h2 id="city-name">City:</h2>
+        <img id="weather-icon" alt="Weather Icon" />
+        <p id="description">Description:</p>
+        <p>Temperature:<span id="temperature"></span>°C</p>
+        <p>Feels Like: <span id="feels-like"></span>°C</p>
+        <p>Humidity: <span id="humidity"></span>%</p>
+        <p>Air Pressure: <span id="pressure"></span>hPa</p>
+        <p>Wind Speed: <span id="wind-speed"></span> km/h</p>
+        <p>Cloud Coverage: <span id="clouds"></span>%</p>
+        <p>Sunrise: <span id="sunrise"></span></p>
+        <p>Sunset: <span id="sunset"></span></p>
+      </div>
+      <p id="error-message"></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+  <!-- Animations using particles.js & three.js -->
+  <div id="particles-js"></div>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 5 },
+        move: { enable: true, speed: 2 },
+      },
+    });
+  </script>
+</html>
